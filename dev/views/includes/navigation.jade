@@ -1,0 +1,22 @@
+- var tabIndex = 1;
+
+mixin list(data)
+  if (typeof data === 'object')
+    ul(class= tabIndex === 1 ? 'navigation' : 'subnavigation')
+      each item, index in data
+
+        if (typeof item.action === 'object')
+          li( tabindex = tabIndex++ )
+            section(class = 'nav-item')
+              span(class = 'nav-item-title') #{item.title}
+              i(class = 'fa nav-item-icon')
+            mixin list(item.action)
+        else 
+          li
+            a( href = item.action tabindex = tabIndex++ class = 'nav-item')
+              span(class = 'nav-item-title') #{item.title}
+          mixin list(item.action)
+
+nav
+    +list(navigation)
+

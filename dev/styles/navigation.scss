@@ -1,0 +1,46 @@
+// First Level
+ul{
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    transition-property: max-height;
+    transition-timing-function: ease;
+    transition-duration: 100ms;
+    transition-delay: 0;
+   
+
+    .nav-item{
+
+      transition: all 100ms;
+      padding: 5px;
+
+      border: 1px solid #{darken($navThemeBase, 3%)};
+      border-bottom:none;
+
+      text-indent:0;
+
+      
+    }
+
+    li{
+      
+      // Second Level
+      ul{ 
+        height:auto;
+        max-height:0;
+        overflow:hidden;
+      }
+
+      &.selected{
+
+        & > ul{
+          transition-duration: 2s;
+          transition-delay: 0;
+          max-height:600px;
+        }
+      }
+
+  }
+}

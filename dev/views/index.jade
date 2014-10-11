@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    
+    //- Font Import
+    link(href='http://fonts.googleapis.com/css?family='+core.basefont rel='stylesheet' type='text/css')
+    
+    //- CSS Imports
+    //- link(rel="stylesheet" type="text/css" href="styles/libraries/normalize.css")
+    //- link(rel="stylesheet" type="text/css" href="styles/libraries/reset.css")
+    //- link(rel="stylesheet" type="text/css" href="styles/libraries/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="styles/libraries/font-awesome/font-awesome.min.css")
+    link(rel="stylesheet" type="text/css" href="styles/core.css")
+
+  body
+    section#app
+      header#app-header
+        span
+          | HEADER
+
+      section#app-body
+        
+        section#app-sidebar
+          include ./includes/navigation.jade
+        
+        section#app-content CONTENT
+
+      footer#app-footer
+        span
+          | FOOTER
+
+    script(type="text/javascript" src="scripts/modules.js")
+    script(type="text/javascript" src="scripts/libraries/apollo/apollo.min.js")
+    script(type="text/javascript" src="scripts/app.js")
+

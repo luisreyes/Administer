@@ -1,0 +1,35 @@
+/*Ids are used as key selectors*/
+
+#app,
+#app-content,
+#app-sidebar{ 
+  height:100%;
+  overflow: auto;
+}
+
+#app-body{ height:calc( 100% - #{$headerHeight+$footerHeight} );}
+
+#app-header{
+  background-color:$headerBGColor;
+  color:$headerFontColor;
+  height:$headerHeight;
+}
+
+#app-body{}
+
+#app-content{
+  float:left;
+  width:calc( 100% - #{$sidebarWidth} );
+}
+
+#app-sidebar{
+  float:left;
+  width:$sidebarWidth;
+  background-color:$sidebarBGColor;
+}
+
+#app-footer{
+  background-color:$footerBGColor;
+  color:$footerFontColor;
+  height:$footerHeight;
+}

@@ -1,0 +1,151 @@
+{
+  "core":{
+    "basefont":"Open+Sans"
+    },
+  "navigation":[
+    {
+      "title": "Home",
+      "action":"#home"
+    },
+    {
+      "title": "Report",
+      "action":[
+        {
+          "title": "Sales",
+          "action":"#sales"
+        },
+        {
+          "title": "Inventory",
+          "action":"#inventory"
+        },
+        {
+          "title": "Team Management",
+          "action":"#team"
+        }
+      ]
+    },
+    {
+      "title": "News",
+      "action":[
+        {
+          "title": "World",
+          "action":[
+            {
+              "title": "India",
+              "action":"#india"
+            },
+            {
+              "title": "Germany",
+              "action":"#germany"
+            },
+            {
+              "title": "London",
+              "action":"#london"
+            },
+            {
+              "title": "Japan",
+              "action":"#japan"
+            }
+          ]
+        },
+        {
+          "title": "Local - US",
+          "action":[
+            {
+              "title": "Chicago",
+              "action":"#chicago"
+            },
+            {
+              "title": "California",
+              "action":"#california"
+            },
+            {
+              "title": "Texas",
+              "action":"#texas"
+            },
+            {
+              "title": "New York",
+              "action":"#newyork"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Team",
+      "action":[
+        {
+          "title": "Front-end Team",
+          "action":[
+            {
+              "title": "JavaScript",
+              "action":[
+                {
+                  "title": "jQuery",
+                  "action":"#jquery"
+                },
+                {
+                  "title": "Ember",
+                  "action":"#Ember"
+                },
+                {
+                  "title": "AngularJs",
+                  "action":"#angular"
+                }
+              ]
+            },
+            {
+              "title": "HTML",
+              "action":"#html"
+            },
+            {
+              "title": "CSS",
+              "action":"#css"
+            }
+          ]
+        },
+        {
+          "title": "Back-end Team",
+          "action":[
+            {
+              "title": "Java",
+              "action":"#java"
+            },
+            {
+              "title": "C/C#",
+              "action":"#c"
+            },
+            {
+              "title": "PHP",
+              "action":"#php"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Menu",
+      "action":[
+        {
+          "title": "Level 1",
+          "action":[
+            {
+              "title": "Level 2",
+              "action":[
+                {
+                  "title": "Level 3",
+                  "action":[
+                    {
+                      "title": "Level 4",
+                      "action":"#suboption"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
