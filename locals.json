@@ -5,10 +5,15 @@
   "navigation":[
     {
       "title": "Home",
+      "icon": "fa-home",
       "action":"#home"
     },
     {
+      "title": "Separator"
+    },
+    {
       "title": "Report",
+      "icon": "fa-bar-chart",
       "action":[
         {
           "title": "Sales",
@@ -52,8 +57,18 @@
           "title": "Local - US",
           "action":[
             {
+              "title": "North"
+            },
+            {
+              "title": "New York",
+              "action":"#newyork"
+            },
+            {
               "title": "Chicago",
               "action":"#chicago"
+            },
+            {
+              "title": "South"
             },
             {
               "title": "California",
@@ -62,10 +77,6 @@
             {
               "title": "Texas",
               "action":"#texas"
-            },
-            {
-              "title": "New York",
-              "action":"#newyork"
             }
           ]
         }
@@ -79,6 +90,7 @@
           "action":[
             {
               "title": "JavaScript",
+              "icon": "fa-code",
               "action":[
                 {
                   "title": "jQuery",
@@ -96,13 +108,18 @@
             },
             {
               "title": "HTML",
+              "icon": "fa-code",
               "action":"#html"
             },
             {
               "title": "CSS",
+              "icon": "fa-code",
               "action":"#css"
             }
           ]
+        },
+        {
+          "title": "Separator"
         },
         {
           "title": "Back-end Team",
@@ -116,12 +133,18 @@
               "action":"#c"
             },
             {
+              "title": "Separator"
+            },
+            {
               "title": "PHP",
               "action":"#php"
             }
           ]
         }
       ]
+    },
+    {
+      "title": "Separator"
     },
     {
       "title": "Menu",

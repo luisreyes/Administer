@@ -8,13 +8,20 @@ mixin list(data)
         if (typeof item.action === 'object')
           li( tabindex = tabIndex++ )
             section(class = 'nav-item')
-              span(class = 'nav-item-title') #{item.title}
+              span(class = 'nav-item-title') 
+                i(class = 'fa #{item.icon} nav-item-title-icon')
+                | #{item.title}
               i(class = 'fa nav-item-icon')
             mixin list(item.action)
-        else 
+        else if (typeof item.action === 'string')
           li
             a( href = item.action tabindex = tabIndex++ class = 'nav-item')
+              i(class = 'fa #{item.icon} nav-item-title-icon')
               span(class = 'nav-item-title') #{item.title}
+          mixin list(item.action)
+        else
+          li
+            section(class = 'separator') #{item.title}
           mixin list(item.action)
 
 nav

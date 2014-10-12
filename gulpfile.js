@@ -106,7 +106,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['app/*.html'], ['html']);
+  //gulp.watch(['app/*.html', 'dev/*.scss'], ['html','scss']);
 });
 
 

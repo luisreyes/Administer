@@ -1,4 +1,4 @@
-$headerHeight:25px;
+$headerHeight:30px;
 $headerBGColor:#BBB;
 $headerFontColor:#666;
 
@@ -6,26 +6,27 @@ $footerHeight:25px;
 $footerBGColor:#DDD;
 $footerFontColor:#666;
 
-$sidebarWidth: 200px;
-$sidebarBGColor: lightgreen;
+$sidebarWidth: 250px;
+$sidebarBGColor: #669EBB;
 
 // Navigation
-$navThemeBase: #BBB;
+$navThemeBase: #F5F5F5;
 $navThemeBaseAlt: #4682B4;
 $navThemeBaseFont: #666;
 $navThemeBaseFontAlt: #4682B4;
 $navThemeBaseSelectedFont: #FFF;
 $navThemeAnchor:#4682B4;
 $navThemeAnchorHover:#B85C14;
-
+$navItemSeparatorFontColor:#999;
+$navItemSeparatorBG:#EEE;
 
 
 // http://astronautweb.co/snippet/font-awesome/
-$topLevelExpandIcon: "\f106";
-$topLevelContractIcon: "\f107";
+$topLevelExpandIcon: "\f107";
+$topLevelContractIcon: "\f106";
 
-$subLevelExpandIcon: "\f106";
-$subLevelContractIcon: "\f107";
+$subLevelExpandIcon: "\f107";
+$subLevelContractIcon: "\f106";
 
 
 

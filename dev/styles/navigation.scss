@@ -1,46 +1,230 @@
-// First Level
-ul{
-    
+.navigation{
+
+  /****************************/
+  /* Global Navigation Styles */
+  /****************************/
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor:default;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  .fa{ margin: 3px; }
+  .nav-item-title-icon{ float:left; margin-right: 10px; margin-left: 0; }
+  .nav-item-icon{ float:right; }
+
+
+
+  
+  /**************************/
+  /* Disable Text Selection */
+  /**************************/
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+
+
+
+  /**************************/
+  /* Global Nav Item Styles */
+  /**************************/
+  .nav-item{
+    transition: all 100ms;
+    padding: 15px;
+    text-indent:0;
+  }
+  
+
+
+
+  /*****************/
+  /* Separator Row */
+  /*****************/
+  .separator{
+      font-size: smaller;
+      padding: 5px;
+      color:$navItemSeparatorFontColor;
+      background-color:$navItemSeparatorBG;
+      border: 1px solid #{darken($navThemeBase, 3%)};
+      border-bottom:none;
+
+  }
+
+
+
+
+  /*******************************/
+  /* Top-Level Selected Dropdown */
+  /*******************************/
+  & > .selected > .nav-item{
+    background-color:$navThemeBaseAlt;
+    border: 1px solid $navThemeBaseAlt;
+    border-top: 1px solid #{darken($navThemeBaseAlt,5%)};
+    color:$navThemeBaseSelectedFont;
+    text-indent:2px;
+
+    // Top-Level Selected Icon
+    & > .nav-item-icon:before{
+      content:$topLevelContractIcon;
+    }
+  }
+
+
+
+
+  /********************/
+  /* Top-Level Styles */
+  /********************/
+  & > li > section.nav-item{
+    &:hover{
+      background-color:$navThemeBaseAlt;
+      color:$navThemeBaseSelectedFont;
+      border-color:$navThemeBaseAlt;
+    }
+
+    // Top-Levels Icon
+    & .nav-item-icon:before{
+      content:$topLevelExpandIcon;
+    }
+  }
+
+
+
+
+  /*******************************/
+  /* Sub-Level Selected Dropdown */
+  /*******************************/
+  & .subnavigation > .selected > .nav-item{
+    color:$navThemeBaseAlt;
+    text-indent:2px;
+
+    // Sub-Level Selected Icon
+    & > .nav-item-icon:before{
+      content:$subLevelContractIcon;
+    }
+  }
+
+
+
+
+  /*********************/
+  /* All-Levels Styles */
+  /*********************/
+  & section.nav-item{
+    &:hover{
+      color:$navThemeBaseAlt;
+      text-indent:2px;
+    }
+
+    // All-Levels Icon
+    & .nav-item-icon:before{
+      content:$subLevelExpandIcon;
+    }
+
+  }
+
+
+
+
+
+  /**********************************/
+  /* Selected Dropdown Level Styles */
+  /**********************************/
+  .selected {
+    ul{
+      border-left: 7px solid $navThemeBaseAlt;
+      
+      & .selected ul{
+        border-left-color: #{darken($navThemeBaseAlt,10%)};
+
+        & .selected ul{
+          border-left-color: #{darken($navThemeBaseAlt,15%)};
+
+          & .selected ul{
+            border-left-color: #{darken($navThemeBaseAlt,20%)};
+
+            & .selected ul{
+              border-left-color: #{darken($navThemeBaseAlt,25%)};
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+  /********************/
+  /* All Level Styles */
+  /********************/
+  ul{
+
     padding: 0;
     margin: 0;
     list-style: none;
-    
+
+    /***************/
+    /* Transitions */
+    /***************/
     transition-property: max-height;
     transition-timing-function: ease;
     transition-duration: 100ms;
     transition-delay: 0;
-   
+  }
 
-    .nav-item{
+  li{
+    background-color:$navThemeBase;
 
-      transition: all 100ms;
-      padding: 5px;
-
-      border: 1px solid #{darken($navThemeBase, 3%)};
-      border-bottom:none;
-
-      text-indent:0;
-
-      
+    ul{ 
+      height:auto;
+      max-height:0;
+      overflow:hidden;
     }
 
-    li{
-      
-      // Second Level
-      ul{ 
-        height:auto;
-        max-height:0;
-        overflow:hidden;
+    &.selected{
+
+      & > ul{
+        transition-duration: 2s;
+        transition-delay: 0;
+        max-height:600px;
       }
+    }
 
-      &.selected{
-
-        & > ul{
-          transition-duration: 2s;
-          transition-delay: 0;
-          max-height:600px;
+    ul li{
+      background-color:#{lighten($navThemeBase, 5%)};
+      ul li{
+        background-color:#{lighten($navThemeBase, 10%)};
+        ul li{
+          background-color:#{lighten($navThemeBase, 15%)};
+          ul li{
+            background-color:#{lighten($navThemeBase, 20%)};
+          }
         }
       }
+    }
+  }
 
+
+
+
+
+  /**********************/
+  /* Anchor Tags Styles */
+  /**********************/
+  a{
+    color:$navThemeAnchor;
+    display:inline-block;      
+    width:100%;
+    text-decoration:none;
+
+    &:hover{
+      color:$navThemeAnchorHover;
+    }
   }
 }

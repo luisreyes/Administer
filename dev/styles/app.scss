@@ -4,7 +4,9 @@
 #app-content,
 #app-sidebar{ 
   height:100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #app-body{ height:calc( 100% - #{$headerHeight+$footerHeight} );}
@@ -24,6 +26,7 @@
 
 #app-sidebar{
   float:left;
+  border-right: 1px solid #{darken($navThemeBase, 10%)};
   width:$sidebarWidth;
   background-color:$sidebarBGColor;
 }
